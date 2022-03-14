@@ -1,0 +1,416 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*------------------------- navbar------------------------- */
+.nav {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 10000;
+}
+.nav img {
+  height: 50px;
+  width: 76px;
+  margin-left: 100px;
+}
+.nav ul {
+  display: flex;
+  margin-left: 270px;
+}
+.nav ul li {
+  list-style: none;
+  padding: 25px 10px;
+  position: relative;
+}
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.nav ul li a:hover ,.nav ul li a:active{
+  color: gold;
+}
+.nav i {
+  font-size: 16px;
+}
+/* ------------------navbar submenus------------------ */
+.nav ul li ul {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 70px;
+  padding: 5px;
+  border-radius: 5px;
+  width: auto;
+  margin: 0px;
+  background-color: rgb(28, 63, 104);
+  box-shadow: rgba(52, 52, 94, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.nav ul li ul li {
+  width: 150px;
+  padding: 10px;
+}
+.nav ul li ul li:hover , .nav ul li ul li:active{
+    transform: scale(1.1);
+    transition: all 1s;
+    color: gold;
+}
+.nav ul li:hover , .nav ul li:hover  ul {
+  z-index: 1000;
+  display: flex;
+}
+.ham{
+  display: none;
+}
+/* -----------------------cover----------------------- */
+.cover {
+  width: 100%;
+  height: 100vh;
+  background: url("images/bg.png") rgba(6, 24, 44, 0.4);
+  background-size: cover;
+}
+.box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box h1 {
+  font-family: "Caveat", cursive;
+  font-size: 70px;
+  color: white;
+}
+.box p {
+  width: 59%;
+  color: gold;
+  font-family: "Montserrat";
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 2;
+}
+.modal{
+  background: rgba(0, 0, 0, 0);
+  padding: 15px 40px;
+  margin-top: 40px;
+  border: 2px solid gold;
+  font-style: sans-serif;
+  font-size: 20px;
+  color: gold;
+}
+.modal:hover , .modal:active{
+  color: white;
+  border: white solid 2px;
+}
+.box p a {
+  text-decoration: none;
+  color: rgb(31, 205, 228);
+}
+.box i {
+  font-size: 40px;
+  color: white;
+  position: relative;
+  top: 100px;}
+/* ------------------------cards------------------------  */
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 39vh;
+  gap: 47px;
+  margin:  0px 100px 30px;
+  padding-top: 94px;
+}
+.card {
+  color: white;
+  font-family: sans-serif;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+  
+}
+.card:hover , .card:active{
+  transform: scale(1.05);
+}
+
+.acads {
+  background: url("images/Acads.png");
+}
+.sports {
+  background: url("images/sports.png");
+}
+.hostel {
+  background: url("images/hostels.png");
+}
+.back{
+  padding: 5rem 1.5em 1.5rem;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  transform: translateY(57%);
+  transition: transform 500ms ease;
+
+}
+.back h1{
+  position: relative;
+}
+.back p{
+  padding: 10px 0px;
+}
+.back a{
+  color: gold;
+  text-decoration: none;
+}
+.back h1::after{
+  content: '';
+  background-color: gold;
+  width: 400px;
+  height: 4px;
+  left: -24px;
+  bottom: -4px;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms;
+}
+.card:hover .back h1::after{
+  transform: scaleX(1);
+}
+.card:hover .back{
+  transform: translateY(0);
+}
+/* ------------------------hiddenbox------------------------ */
+.hiddenbox{
+  position: absolute;
+  color: black;
+  background-color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  max-height: 400px;
+  width: auto;
+  right: 50px;
+  top: 200px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.hiddenbox h1{
+  font-size: 30px;
+  color:black;
+  margin: 20px 10px;
+}
+.hiddenbox P{
+  padding: 10px;
+  width: 600px;
+  color: black;
+}
+.xicons{
+  position: relative;
+}
+.hiddenbox i{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: red;
+  font-size: 20px;
+  text-align: right;
+  
+}
+/* -----------------Main Content Section----------------- */
+.container {
+  display: grid;
+  grid-template-columns: 913px auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  margin: 0px 100px 50px;
+
+}
+.mainbox {
+  min-height: 100vh;
+  grid-row: 1/3;
+  /* background-color: #d18ce0; */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  font-family: 'Ubuntu';
+  font-size: 16px;  
+}
+.mainbox h1{
+  padding: 50px 30px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.date{
+  text-align: right;
+}
+.mainbox li{
+display: flex;
+justify-content: space-between;
+list-style: circle;
+padding: 15px 40px;
+color: grey;
+position: relative;
+}
+.mainbox ul >li::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background:rgba(0, 0, 0, 0.1);
+}
+.sources h2{
+  padding: 10px 20px;
+}
+.sources li{
+  padding:  5px 40px;
+  color: rgb(43, 190, 235);
+}
+/* -----------------------sidebar-----------------------  */
+.sidebar {
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: sticky;
+  top: 71px;
+  font-family: 'Ubuntu';
+  height: 80vh;
+  background-color: white;
+
+ 
+}
+.sidebar h2{
+  color: rgb(25, 182, 230);
+  padding: 30px;
+
+}
+.sidebar li{
+  margin: 5px 20px;
+  padding: 5px 5px;
+  list-style: none;
+  font-size: 18px;
+  position: relative;
+  /* width: 100%; */
+  display: flex;
+  color: grey;
+  
+}
+.sidebar a{
+  text-decoration: none;
+  color: grey;
+  padding: 0 0 0 10px;
+}
+.selected{
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -6px;
+  width: 4px;
+  background-color: #98DED9;
+  transform: scaleY(0);
+  transition: transform ease 500ms;
+}
+.show{
+  transform: scaleY(1);
+}
+.corona{
+  width: 80%;
+}
+.corona h1{
+  padding: 0px 30px;
+  margin: 0px;
+  margin: 0px;
+  color: #98DED9;
+ }
+ .corona h2{
+   font-size: 16px;
+  font-family: 'Montserrat';
+  padding: 10px 30px;
+  color: #FF4646;
+ }
+ .corona p{
+   padding: 0px 30px 10px;
+   font-size: 16px;
+   color: grey;
+
+ }
+ .corona a{
+  padding: 0px 30px 10px;
+  color: blueviolet;
+ }
+ /*------------------- footer------------------- */
+ .footer{
+  background: url('images/bg.png');
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-sizing: border-box;
+ }
+ .black{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.5);
+  
+ }
+ .cr{
+   grid-column: 1/4;
+   align-items: center;
+   text-align: center;
+ }
+ .social{
+   display: flex;
+   color: white;
+   align-items: center;
+   justify-content: center;
+   font-family: sans-serif;
+    height: 100px;
+    color: gold;
+ }
+ .social h1{
+   font-size: 25px;
+ }
+ .social i{
+   font-size: 2.5rem;
+ }
+ .social ul{
+  padding: 5px 20px ;
+}
+.social p{
+  color: white;
+}
+.cr{
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Syne Mono';
+}
+/* -----------------miscelleneaus----------------- */
+#importantdates,#sources,#importantlinks{
+  padding-top: 94px;
+}

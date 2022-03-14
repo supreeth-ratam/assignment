@@ -1,0 +1,139 @@
+@media screen and (max-width: 1472px) {
+    .nav{
+        position: fixed;
+    }
+    .nav ul{
+        position: absolute;
+        top: 0px;
+        right: 17px;
+        flex-direction: column;
+        margin: 0px;
+        padding: 64px 10px 0px;
+        z-index: 5;
+        background-color: rgba(6, 24, 44);
+        height: 100vh;
+        transition: 500ms ease;
+        
+    }
+    .nav ul li ul{
+        height: fit-content;
+        width: 90%;
+    }
+    .ham{
+        display: flex;
+        position: fixed;
+        font-size: 18px;
+        right: 30px;
+        z-index: 6;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .gallery{
+        margin: 20px 50px 30px;
+        grid-template-columns: auto auto auto;
+        gap: auto;
+    }
+    .container{
+        margin: 0px 50px 50px;
+    }
+}
+  
+  @media screen and (max-width: 1348px){
+    .container{
+        margin: 0px 0px 50px;
+        grid-template-columns: 913px auto;
+    }
+    .gallery{
+        margin: 20px 0px 30px;
+        grid-template-columns: auto auto auto;
+        gap: auto;
+    }
+}
+@media screen and (max-width: 1156px){
+    .container{
+        grid-template-columns: 813px auto; 
+    }
+}
+@media screen and (max-width: 1081px){
+    .container{
+        grid-template-columns: auto auto; 
+        margin: 0px;
+    }
+}
+@media screen and (max-width: 918px){
+    .box h1{
+        font-size: 50px;
+    }
+    .box p{
+        width: auto;
+    }
+    .mainbox{
+        grid-column: 1/3;
+        width: auto;
+    }
+    .gallery{
+        height: auto;
+    }
+    .card{
+        grid-column: 1/4;
+        width: auto;
+        margin: auto;
+        margin: 30px;
+    }
+    .sidebar{
+        display: none;
+    }
+}
+@media screen and (max-width: 918px){
+    .nav img{
+        margin-left: 20px;
+    }
+    .back{
+        transform: translateY(50%);
+    }
+    .mainbox h1{
+        padding: 50px 5px;
+    }
+    .mainbox li{
+        justify-content: space-between;
+        padding: 15px 5px;
+    }
+    .mainbox{
+        width: 80%;
+        margin: auto;
+        
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        margin: 0px;
+        padding: 0px;
+        grid-template-columns: auto auto;
+    }
+    .nav img{
+        margin-left: 20px;
+    }
+    .mainbox{
+        width: 100%;
+        overflow-x: scroll;
+        
+    }
+    .social i{
+        display: none;
+
+    }
+    .mainbox li{
+        padding: 15px 10px;
+
+    }
+    .footer{
+        width: 100%;
+    }
+    .box p {
+        line-height: normal;
+        padding: 5px;
+    }
+    .back {
+        transform: translateY(58%);
+      }
+}
